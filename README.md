@@ -1,43 +1,33 @@
 # nidana
 
-**Nidana — LLM Clinical Reasoning Benchmark. Testing AI diagnostic accuracy across 20 medical specialties with 2000+ clinical vignettes.**
+Python scaffold for an LLM clinical reasoning benchmark concept. Work in progress.
 
-![Build](https://img.shields.io/badge/build-passing-brightgreen) ![License](https://img.shields.io/badge/license-proprietary-red)
+## What's Here
 
-## Install
+A Nidana class with stub methods for processing, analyzing, and transforming. These methods increment a counter and return `{ "ok": True }` without performing real operations.
+
+- src/core.py - Main Nidana class with placeholder methods
+- src/__main__.py - CLI entry point
+- src/nidana/ - Package directory with module files:
+  - benchmark.py, evaluator.py, scorer.py - Evaluation stubs
+  - models.py, leaderboard.py, report.py - Data/reporting stubs
+  - cli.py - CLI module
+  - vignettes/ - Clinical vignettes directory
+- examples/ - Example scripts
+- tests/ - Test directory
+
+## Tech Stack
+
+- Python
+- Standard library only (time, logging, json, typing)
+
+## Status
+
+AI-generated scaffold. The class methods are stubs that do not perform actual clinical reasoning evaluation, LLM benchmarking, or medical vignette processing. No clinical data, medical knowledge base, or LLM integration exists despite the description claiming 2000+ clinical vignettes across 20 specialties.
+
+## Setup
+
 ```bash
-pip install -e ".[dev]"
+pip install -r requirements.txt
+python -m src.nidana
 ```
-
-## Quick Start
-```python
-from src.core import Nidana
- instance = Nidana()
-r = instance.process(input="test")
-```
-
-## CLI
-```bash
-python -m src status
-python -m src run --input "data"
-```
-
-## API
-| Method | Description |
-|--------|-------------|
-| `process()` | Process |
-| `analyze()` | Analyze |
-| `transform()` | Transform |
-| `validate()` | Validate |
-| `export()` | Export |
-| `get_stats()` | Get stats |
-| `get_stats()` | Get stats |
-| `reset()` | Reset |
-
-## Test
-```bash
-pytest tests/ -v
-```
-
-## License
-(c) 2026 Officethree Technologies. All Rights Reserved.
